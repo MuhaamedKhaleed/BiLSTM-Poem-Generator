@@ -27,24 +27,22 @@ A deep learning-based natural language generation engine that generates poetic v
 
 ## Project Structure
 
-text
+```text
 BiLSTM-Poem-Generator/
-├── poem.txt             # Source text corpus (place your poetry here)
-├── poem_generator.py    # Main training and generation script
-├── requirements.txt     # Python dependencies
-├── .gitignore           # Git ignore patterns
-└── README.md            # Project documentation
-
+├── README.md            # Project documentation
+├── main.py              # Model training and text generation pipeline
+└── requirements.txt     # Python dependencies
+```
 
 ## Setup Instructions
 
 ### 1. Prerequisites
-Ensure Python 3.9+ and pip are installed on your machine. For accelerated training, ensure appropriate GPU drivers and CUDA toolkit are installed.
+Ensure Python 3.9+ and `pip` are installed on your machine.
 
 ### 2. Environment Setup
 Clone the repository and initialize a virtual environment:
 
-bash
+```bash
 git clone https://github.com/your-username/BiLSTM-Poem-Generator.git
 cd BiLSTM-Poem-Generator
 python -m venv venv
@@ -54,22 +52,26 @@ source venv/bin/activate
 
 # On Windows:
 .\venv\Scripts\activate
-
+```
 
 ### 3. Install Dependencies
-bash
+
+```bash
 pip install --upgrade pip
 pip install -r requirements.txt
-
+```
 
 ### 4. Prepare Dataset
-Place your training text file named `poem.txt` in the root directory. Each line should ideally represent a verse or poetic line.
+Place your training text corpus (e.g. `poem.txt`) in the working directory. Each line should represent a verse or poetic line.
 
 ### 5. Run Training and Generation
-Execute the training script:
+Execute the main script:
 
-bash
-python poem_generator.py
+```bash
+python main.py
+```
 
+## Limitations and Known Issues
 
-To change generation behavior, adjust the `seed_text` string and `next_words` integer at the bottom of the script.
+- **Greedy Decoding**: Next-token generation currently relies on `argmax` selection, which can lead to repetitive phrases or local loops over long sequence lengths.
+- **Corpus Sensitivity**: Model quality and vocabulary diversity depend heavily on the size and variety of the input training corpus.
