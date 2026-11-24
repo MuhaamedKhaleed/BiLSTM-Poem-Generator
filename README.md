@@ -79,3 +79,8 @@ docker run --rm poem-generator:local --help
 - Corpus rights and model memorization risks need review before real training or publication. No corpus/model redistributed, license change, release or benchmark badge.
 
 Demo screenshot/GIF: TODO after real-data work. See docs/verification.md and unapplied docs/presentation.md.
+
+
+## License scope
+
+New project-owned package/engineering files use the owner's MIT default. See LICENSE and LICENSE-SCOPE.md. This is not permission to relicense historical notebooks, third-party code, datasets, models or weights. Their provenance and terms still need review. Earlier verification entries saying no license was added describe the initial pilot, not this follow-up.
