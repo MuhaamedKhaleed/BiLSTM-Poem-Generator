@@ -13,3 +13,8 @@
 
 ### Added
 - Locked package, explicit CLI, real synthetic backend tests, quality checks, data-only Docker, free CI and honest scope docs.
+
+
+### Engineering follow-up
+- Use the committed uv lock in CI and key dependency-installer caching by that lock.
+- Complete copy-only profile README drafts and clarify historical versus current verification.
