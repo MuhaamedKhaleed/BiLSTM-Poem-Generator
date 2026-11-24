@@ -1,65 +1,31 @@
-# Byte-compiled / optimized / DLL files
+.venv/
 __pycache__/
 *.py[cod]
-*$py.class
-
-# C extensions
-*.so
-
-# Distribution / packaging
-.Python
+.env
+.env.*
+!.env.example
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage*
+htmlcov/
 build/
-develop-eggs/
 dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-share/python-wheels/
 *.egg-info/
-.installed.cfg
-*.egg
-
-# Virtual Environments
-virtualenv/
-virtualenvs/
-venv/
-env/
-ENV/
-env.bak/
-venv.bak/
-
-# IDEs and Text Editors
-.idea/
-.vscode/
-*.swp
-*.swo
-*~
-.project
-.pydevproject
-.settings/
-
-# Model weights, datasets, checkpoints
-*.h5
-*.keras
-*.pb
-*.ckpt
-checkpoints/
-models/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# OS generated files
-.DS_Store
-Thumbs.db
-
-# Logs
+.pre-commit-cache/
+results/
 logs/
-*.log
-tensorboard/
+*.safetensors
+*.bin
+*.pt
+*.csv
+*.zip
+
+*.joblib
+*.pkl
+kaggle.json
+
+*.keras
+*.h5
+artifacts/
+poem.txt
