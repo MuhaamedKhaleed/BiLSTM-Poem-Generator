@@ -1,0 +1,17 @@
+{
+  "source": "https://www.gutenberg.org/ebooks/1041",
+  "train_lines": 1200,
+  "dev_lines": 200,
+  "test_lines": 200,
+  "history": [],
+  "selection": "Best development checkpoint saved before120second execution turn timeout; no restart or test-driven tuning.",
+  "test_next_token_accuracy": 0.0237264484167099,
+  "test_crossentropy_excluding_regularization": 7.016258716583252,
+  "test_perplexity": 1114.6087401120033,
+  "test_oov_targets": 343,
+  "test_prefixes": 1433,
+  "generated": "shall i compare of of of of of of of of of of of of",
+  "elapsed_seconds": 2.7972941398620605,
+  "peak_rss_kb": 641680,
+  "limits": "Line-disjoint chronological source slices, near-repeatedphrases can remain, not sonnet/author-disjoint. Heldout test read once after devcheckpointselection; poem aesthetic quality not measured."
+}
