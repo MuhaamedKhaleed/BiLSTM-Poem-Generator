@@ -1,0 +1,15 @@
+# Changelog
+
+## Unreleased
+
+### Fixed
+- Split unique normalized lines before prefix generation, replacing training-set evaluation with labeled validation metrics.
+- Preserve OOV prompt positions and exclude reserved output IDs during greedy generation.
+- Require explicit training, validate local artifacts and refuse overwrite.
+
+### Changed
+- Sparse next-token labels replace one-hot matrices. Whitespace tokenization preserves punctuation; retraining is required, old artifacts incompatible.
+- Historical architecture defaults retained; original script kept under legacy/.
+
+### Added
+- Locked package, explicit CLI, real synthetic backend tests, quality checks, data-only Docker, free CI and honest scope docs.
