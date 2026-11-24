@@ -21,3 +21,10 @@ Verification commands: uv sync --locked --extra dev --extra ml; poem-generator -
 Behavior changes: whitespace tokenizer preserves punctuation instead of Keras filtering, OOV reserved, split before prefixes, sparse loss, reserved generation IDs disallowed, no implicit training. Core architecture defaults retained, embedding remains unmasked like original. Old tokenizer/model files incompatible. TF seed does not guarantee identical devices or later-library runs; setting PYTHONHASHSEED after startup was removed rather than claimed effective.
 
 Weaknesses: no poem/source-level independence, untouched test set, real corpus, pretrained weights, human quality evaluation, copyright review, memory/runtime benchmark, continuation plagiarism audit or deployment. Validation loss includes regularization and OOV targets, it is not pure cross entropy/perplexity. Safe mode does not justify loading unknown Keras files. Expected local errors are caught, arbitrary TensorFlow hardware faults are not hidden.
+
+
+## Gap-closure follow-up (24 November 2026)
+
+The CI source now uses uv 0.13.8 and the committed transitive lock, rather than a new pip resolution of direct pins. Dependency installer caching is keyed by uv.lock. The local matching command is `uv sync --locked --extra dev --extra ml`, followed by the existing tests/quality commands. This does not cache or publish private datasets, weights or model outputs. Public-repository-only guards remain. The changed workflow's hosted outcome must be checked after publication; prior green runs do not validate a changed workflow.
+
+A complete copy-only project-focused profile README draft is appended to presentation.md. No profile account edits, main merge, PR, release or license change is implied by that text. Historical notebook/full-data/quality limitations remain open, not replaced by a passing synthetic test.
