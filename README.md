@@ -84,3 +84,7 @@ Demo screenshot/GIF: TODO after real-data work. See docs/verification.md and una
 ## License scope
 
 New project-owned package/engineering files use the owner's MIT default. See LICENSE and LICENSE-SCOPE.md. This is not permission to relicense historical notebooks, third-party code, datasets, models or weights. Their provenance and terms still need review. Earlier verification entries saying no license was added describe the initial pilot, not this follow-up.
+
+## Checked synthetic wiring demo
+
+See [commands, saved output and scope](docs/synthetic-demo.md). This is invented-input execution evidence, not model accuracy or a real-data gallery.
