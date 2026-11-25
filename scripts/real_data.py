@@ -12,6 +12,7 @@ def main():
     parser.add_argument(
         "--manifest", help="Reviewed selected Open Images source manifest"
     )
+    parser.add_argument("--epochs", type=int, default=2, help="Training epochs (default: the small recorded run)")
     args = parser.parse_args()
     import hashlib
     import json
@@ -48,7 +49,7 @@ def main():
         training,
         validation,
         root / "model-real",
-        epochs=2,
+        epochs=args.epochs,
         batch_size=16,
         embedding=16,
         units=16,
