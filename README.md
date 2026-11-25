@@ -96,3 +96,5 @@ See [actual results, source terms and explicit download/preparation commands](do
 ## Measured CPU quality follow-up
 
 See [quality experiments, results and limits](docs/quality-cpu.md). These go beyond wiring smokes; some improve measured results, while others expose overfit or a stronger simple baseline. No quality guarantee.
+
+See [full-architecture word-level follow-up](docs/word-pilot-full.md): the original path's generation collapse persists under the full default architecture with checkpoint selection, measured on the already-exposed test slice.
