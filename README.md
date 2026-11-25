@@ -98,3 +98,7 @@ See [actual results, source terms and explicit download/preparation commands](do
 See [quality experiments, results and limits](docs/quality-cpu.md). These go beyond wiring smokes; some improve measured results, while others expose overfit or a stronger simple baseline. No quality guarantee.
 
 See [full-architecture word-level follow-up](docs/word-pilot-full.md): the original path's generation collapse persists under the full default architecture with checkpoint selection, measured on the already-exposed test slice.
+
+## Pretrained replacement pilot
+
+See [pretrained fine-tune route, measured results and limits](docs/pretrained-pilot.md): a pinned public distilgpt2 (Apache-2.0) fine-tuned on the same sonnet source and split, runnable on one CPU. This is a separate replacement route for someone who wants usable output from a fresh clone; it does not change or rehabilitate the BiLSTM model above.
