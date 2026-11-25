@@ -22,3 +22,7 @@
 ### Synthetic demonstration follow-up
 
 Added standalone invented-input backend demo, checked JSON output and documented limits. Opt-in ML container added where a model backend exists; default lightweight image unchanged. Hosted container verification is required separately.
+
+### Pretrained fine-tune follow-up
+
+Added pinned distilbert/distilgpt2 download (scripts/fetch_pretrained.py, Apache-2.0) and a sonnet fine-tune pilot (scripts/pretrained_pilot.py) with docs/pretrained-pilot.md. Replacement route, original BiLSTM unchanged; no weights committed.
