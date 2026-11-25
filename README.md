@@ -2,6 +2,17 @@
 
 Train a small BiLSTM on your own local text lines and generate a greedy continuation. Complete normalized unique lines are split before making overlapping prefixes, so validation is not a re-evaluation of the training prefixes.
 
+## Real-data quickstart (about 1 minute)
+
+Needs Python 3.11 or 3.12 (the locked PyTorch/TensorFlow wheels have no 3.13+ build); `--python 3.11` makes uv fetch it. Needs internet for the first install and downloads, and roughly 2 GB of free RAM.
+
+```sh
+uv sync --python 3.11 --locked --extra dev --extra ml
+uv run --no-sync python scripts/fetch_real_data.py --output ./real-source          # Shakespeare sonnets text
+uv run --no-sync python scripts/real_data.py --data ./real-source --epochs 2
+```
+Output: `real-source/model-real/` (model, vocabulary) and `real-report.json` with a generated sample. With 2 epochs the sample repeats words; 20 epochs (about 2 minutes on one CPU core) gave "shall i compare and the love of love of love love". Generate more with `uv run --no-sync poem-generator generate ./real-source/model-real 'shall i compare' --next-words 8`. For a pretrained route see `docs/pretrained-pilot.md` (DistilGPT2 fine-tune). Use a new `--data` folder for each run.
+
 ## Evidence, not poetry-quality claims
 
 29 offline tests, 97% software statement coverage locally. Real TensorFlow CPU checks exercise forward shape, sparse loss, a tiny synthetic epoch, Keras save/load and explicit CLI generation. No real corpus, full training, pretrained weights or poetry-quality evaluation was used. Random synthetic output is not a demo of learned poetry.
