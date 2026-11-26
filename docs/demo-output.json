@@ -1,0 +1,14 @@
+{
+  "synthetic_only": true,
+  "scope": "invented_lines_tiny_random_network_not_poetry_quality",
+  "quality_claim": false,
+  "result": {
+    "training": {
+      "validation_loss_with_regularization": 2.0959970951080322,
+      "validation_next_token_accuracy": 0.5,
+      "validation_prefixes": 2,
+      "validation_oov_targets": 0
+    },
+    "text": "unknown moon softly glow"
+  }
+}

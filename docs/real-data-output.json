@@ -1,0 +1,17 @@
+{
+  "real_data": true,
+  "source": "https://www.gutenberg.org/ebooks/1041",
+  "mirror": "https://github.com/GITenberg/Shakespeare-s-Sonnets_1041",
+  "corpus": "Shakespeare Sonnets, first512 train lines / next128 dev lines",
+  "source_sha256": "e3580b25135e2d89467dd4cef0ccdcdd5f50f8779247fc24612ef653d27dc9d5",
+  "rights": "Source catalog: public domain USA. Gutenberg trademark/license and local-law cautions remain; no corpus/model redistributed.",
+  "training": {
+    "validation_loss_with_regularization": 7.007305145263672,
+    "validation_next_token_accuracy": 0.013771186582744122,
+    "validation_prefixes": 944,
+    "validation_oov_targets": 267
+  },
+  "elapsed_seconds": 22.64,
+  "sample": "shall i compare in in in in in in in in",
+  "limits": "2 CPU epochs small model; no poetry quality, memorization or final-test claim"
+}

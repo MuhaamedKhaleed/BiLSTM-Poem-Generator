@@ -1,0 +1,116 @@
+{
+  "source": "https://www.gutenberg.org/ebooks/1041",
+  "source_sha256": "e3580b25135e2d89467dd4cef0ccdcdd5f50f8779247fc24612ef653d27dc9d5",
+  "model": "Original-path word-level BiLSTM, full default 100/150/100 architecture, sparse targets, train-only vocabulary.",
+  "train_lines": 1200,
+  "dev_lines": 200,
+  "test_lines": 200,
+  "selection": "Best development unregularized cross-entropy checkpoint with patience 8; epoch 1 selected before the single test read below.",
+  "history": [
+    {
+      "epoch": 1,
+      "development_regularized_loss": 6.976740837097168,
+      "development_accuracy": 0.02370990253984928,
+      "development_crossentropy": 6.930640697479248,
+      "development_perplexity": 1023.1492988461963
+    },
+    {
+      "epoch": 2,
+      "development_regularized_loss": 7.371204853057861,
+      "development_accuracy": 0.02370990253984928,
+      "development_crossentropy": 7.2891130447387695,
+      "development_perplexity": 1464.271377867635
+    },
+    {
+      "epoch": 3,
+      "development_regularized_loss": 7.624411106109619,
+      "development_accuracy": 0.02370990253984928,
+      "development_crossentropy": 7.530518531799316,
+      "development_perplexity": 1864.071833520345
+    },
+    {
+      "epoch": 4,
+      "development_regularized_loss": 7.997999668121338,
+      "development_accuracy": 0.025104602798819542,
+      "development_crossentropy": 7.904064178466797,
+      "development_perplexity": 2708.266871478115
+    },
+    {
+      "epoch": 5,
+      "development_regularized_loss": 8.372947692871094,
+      "development_accuracy": 0.02370990253984928,
+      "development_crossentropy": 8.270188331604004,
+      "development_perplexity": 3905.6844867175114
+    },
+    {
+      "epoch": 6,
+      "development_regularized_loss": 8.02299976348877,
+      "development_accuracy": 0.02370990253984928,
+      "development_crossentropy": 7.922863960266113,
+      "development_perplexity": 2759.6633048301337
+    },
+    {
+      "epoch": 7,
+      "development_regularized_loss": 8.308101654052734,
+      "development_accuracy": 0.02370990253984928,
+      "development_crossentropy": 8.184185981750488,
+      "development_perplexity": 3583.8251325040433
+    },
+    {
+      "epoch": 8,
+      "development_regularized_loss": 8.419397354125977,
+      "development_accuracy": 0.02022315189242363,
+      "development_crossentropy": 8.290515899658203,
+      "development_perplexity": 3985.889983475752
+    },
+    {
+      "epoch": 9,
+      "development_regularized_loss": 8.603468894958496,
+      "development_accuracy": 0.0195258017629385,
+      "development_crossentropy": 8.472246170043945,
+      "development_perplexity": 4780.240653047095
+    }
+  ],
+  "selected_epoch": 1,
+  "development_perplexity": 1023.1492988461963,
+  "test_next_token_accuracy": 0.02442428469657898,
+  "test_crossentropy_excluding_regularization": 6.946477890014648,
+  "test_perplexity": 1039.4821027879568,
+  "test_oov_targets": 343,
+  "test_prefixes": 1433,
+  "generation": {
+    "greedy_20_tokens": {
+      "shall i compare": "shall i compare the the of the of the of of of of of of of the of of of of of of",
+      "when i have seen": "when i have seen the the of the of the of of of of of of of the of of of of of of",
+      "my mistress": "my mistress the the of the of the of of of of of of of the of of of of of of",
+      "love is not": "love is not the the of the of the of of of of of of of the of of of of of of"
+    },
+    "sampled_temperature0.8_top12_seed42": {
+      "shall i compare": "in that the in and the to the that thy thou of in the thy and my that to in to thou of the the with i is that my to of thou thy i with that i and in",
+      "when i have seen": "in that the in and the the the that thy thy of in the thy and my that the in the thou of to to that i is that of in the thou thou i with that thy and in",
+      "my mistress": "in that the in and the my the that thy thy of in the thy and my that the in the thou of to to that i is that of in the thou thou i with that thy and in",
+      "love is not": "in that the in and the my the that thy thy of in the thy and my that the in the thou of to to that i is that of in the thou thou i with that thy and in"
+    },
+    "greedy_distinct_word_ratio": {
+      "shall i compare": 0.21739130434782608,
+      "when i have seen": 0.25,
+      "my mistress": 0.18181818181818182,
+      "love is not": 0.21739130434782608
+    },
+    "sampled_distinct_word_ratio": {
+      "shall i compare": 0.3,
+      "when i have seen": 0.3,
+      "my mistress": 0.3,
+      "love is not": 0.3
+    },
+    "longest_shared_train_word_run": {
+      "shall i compare": 2,
+      "when i have seen": 2,
+      "my mistress": 2,
+      "love is not": 2
+    }
+  },
+  "elapsed_seconds": 512.2052733898163,
+  "peak_rss_kb": 858176,
+  "limits": "Second read of this exposed test slice, not an untouched benchmark. Chronological line slices can retain near-repeated phrases across splits and are not sonnet-disjoint. Word perplexity is not comparable to character cross-entropy and neither measures poetic quality, meter or rhyme. Memorization check is limited to exact shared word runs against training lines. Not production poetry."
+}
