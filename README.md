@@ -15,13 +15,13 @@ Output: `real-source/model-real/` (model, vocabulary) and `real-report.json` wit
 
 ## Evidence, not poetry-quality claims
 
-29 offline tests, 97% software statement coverage locally. Real TensorFlow CPU checks exercise forward shape, sparse loss, a tiny synthetic epoch, Keras save/load and explicit CLI generation. No real corpus, full training, pretrained weights or poetry-quality evaluation was used. Random synthetic output is not a demo of learned poetry.
+29 offline tests, 97% software statement coverage locally. Real TensorFlow CPU checks exercise forward shape, sparse loss, a tiny synthetic epoch, Keras save/load and explicit CLI generation. The offline tests use invented text only. The real-data quickstart above trains on public Shakespeare sonnets; its output is a small CPU demo, and no poetry-quality evaluation has been done. Random synthetic output is not a demo of learned poetry.
 
 The historical model architecture remains embedding(100), bidirectional LSTM(150), dropout(0.2), LSTM(100), L2 dense and softmax, with sparse labels instead of vocabulary-sized one-hot matrices. Padding embedding is deliberately unmasked to preserve the original architecture; no claim of padding invariance. Greedy decoding now excludes padding/OOV outputs, and unknown prompt words retain an OOV slot instead of disappearing.
 
 ## Install and verify
 
-Python 3.11/3.12, tested on Linux 3.11. Installation needs internet, processing your files does not. No keys/accounts or model/data downloads. ML is optional; omit `--extra ml` for data checking only.
+Python 3.11/3.12, tested on Linux 3.11. Installation needs internet, processing your files does not. No keys or accounts are needed. The package itself downloads nothing; the `scripts/fetch_*` helpers in the quickstart do. ML is optional; omit `--extra ml` for data checking only.
 
 ```sh
 uv sync --locked --extra dev --extra ml
@@ -73,7 +73,7 @@ UTF-8 lines -> normalize/deduplicate -> whole-line split
 
 ## Container and CI
 
-Multi-stage slim/non-root Docker includes only the data-check CLI, no TensorFlow, dataset, weights or dev tools. ML runs locally via the optional extra. Free public-only standard hosted CI checks real synthetic ML tests, quality/hooks, CLI, Docker build and data-check smoke. No image/artifact publishing or cache charges configured. Local Docker unavailable; only a passing hosted result verifies these Docker commands:
+Multi-stage slim/non-root Docker includes only the data-check CLI, no TensorFlow, dataset, weights or dev tools. ML runs locally via the optional extra. Free public-only standard hosted CI checks real synthetic ML tests, quality/hooks, CLI, Docker build and data-check smoke. No image/artifact publishing or cache charges configured. Docker is verified by hosted CI, not a local daemon:
 
 ```sh
 docker build --tag poem-generator:local .
@@ -89,7 +89,7 @@ docker run --rm poem-generator:local --help
 - No sampling/temperature/top-k, rhyme/meter controls, repetition guard, EOS stopping or calibrated quality estimate.
 - Corpus rights and model memorization risks need review before real training or publication. No corpus/model redistributed, license change, release or benchmark badge.
 
-Demo screenshot/GIF: TODO after real-data work. See docs/verification.md and unapplied docs/presentation.md.
+See docs/verification.md for checks and limits.
 
 
 ## License scope
